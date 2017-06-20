@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+  </head>
+  <body class="bg">
+        <div class="container">
+          <div class="row" id="bar">
+            <div class="row pull-right" style="padding: 5px; cursor:pointer;">
+                <a id="close" href="javascript:window.close()"><span class="glyphicon glyphicon-remove" style="padding: 10px 20px 15px 20px; color: rgba(255, 255, 255, 0.5);" aria-hidden="true"></span></a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8">
+              <br><br>
+              <h1 class="center-block">Upload Problem report for processing</h1>
+              <br><br><br><br>
+              <form action="/" method="POST" enctype="multipart/form-data">
+                <div class="input-group">
+                  <input type="file" name="zip" class="form-control">
+                  <span class="input-group-btn">
+                    <input type="submit" id="button" class="btn btn-default" value="Go!">
+                  </span>
+                </div>
+              </form>
+
+            </div>
+            <div id="spinner">
+              <br>
+              <br>
+              <img class="img-responsive center-block" src="./img/default.svg" />
+            </div>
+          </div>
+          <br>
+          <br>
+        </div>
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+      $('#spinner').hide();
+      $( "#button" ).click(function(){
+        $('#spinner').fadeIn();
+      });
+    </script>
+    <script src="./js/smooth-pages.min.js"></script>
+    <script>
+      SmoothPages.init({overlayColor: '#fff'});
+    </script>
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+  </body>
+</html>

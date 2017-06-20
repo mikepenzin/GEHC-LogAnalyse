@@ -1,0 +1,48 @@
+@import "";
+
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+html{
+	height: 100%;
+	margin: 0;
+}
+
+body {
+  background: #393e41;
+  color: #F7F7F7;
+  font-family: Raleway;
+}
+
+/*Scroll bar*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: #c7c7c7;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.bg {
+  background-image: url("../img/ge_rings_1920x10801.png");
+  background-size: cover;
+  background-position: center;
+}
+
+ #bar{
+   -webkit-user-select: none;
+   -webkit-app-region: drag;
+ }
+
+ a, button {
+   -webkit-app-region: no-drag;
+ }
